@@ -28,7 +28,8 @@ public class BishopBlackTest {
     @Test
     public void way() throws ImpossibleMoveException {
         BishopBlack bishopBlack = new BishopBlack(C1);
-        Cell[] cells = new Cell[] {D2, E3, F4, G5, H6};
-        assertThat(bishopBlack.way(H6), is(cells));
+        Cell[] way = bishopBlack.way(Cell.G5);
+        Cell[] cells = new Cell[] {D2, E3, F4, G5};
+        assertThat(way, is(cells));
     }
 }
